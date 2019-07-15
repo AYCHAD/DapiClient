@@ -40,9 +40,8 @@ class DAPIClient {
    * @param {[string[]]} [excludedIps]
    * @returns {Promise<*>}
    */
-  async makeRequestToRandomDAPINode(method, params, excludedIps = []) {
+  async makeRequestToRandomDAPINode(method, params, excludedIps = ['34.211.58.233']) {
     this.makeRequest.callCount = 0;
-
     return this.makeRequestWithRetries(method, params, this.retries, excludedIps);
   }
 
